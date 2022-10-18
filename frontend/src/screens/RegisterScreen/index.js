@@ -133,8 +133,8 @@ function Register() {
               <span className="input-group-addon">
                 <i className="fa fa-phone"></i>
               </span>
-              <AuthInput type="tel" value={phone_number} name="phone_number" placeholder="Phone Number(eg.+19050126789)"
-                pattern="\+1[0-9]{10}" update={setPhoneNumber} />
+              <AuthInput type="text" value={phone_number} name="phone_number" placeholder="Phone Number(eg.9050126789)"
+                pattern="[0-9]{10}" update={setPhoneNumber} />
             </div>
           </div>
           <div className="form-group">

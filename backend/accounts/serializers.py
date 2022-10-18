@@ -44,9 +44,9 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         if attrs.get('phone_number', False):
-            r = re.compile(r'\+1\d\d\d\d\d\d\d\d\d\d')
+            r = re.compile(r'\d\d\d\d\d\d\d\d\d\d')
             if not r.match(attrs['phone_number']):
-                raise serializers.ValidationError({"phone_number": "Please enter a valid 10 digit phone number (eg.+19051233211)"})
+                raise serializers.ValidationError({"phone_number": "Please enter a valid 10 digit phone number (eg.9051233211)"})
 
         else:
              raise serializers.ValidationError(
